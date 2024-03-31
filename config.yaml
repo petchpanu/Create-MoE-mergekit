@@ -1,0 +1,19 @@
+
+base_model: mistralai/Mistral-7B-Instruct-v0.2
+dtype: float16
+gate_mode: cheap_embed
+experts:
+  - source_model: mlabonne/AlphaMonarch-7B
+    positive_prompts:
+    - "chat"
+    - "assistant"
+    - "tell me"
+    - "explain"
+    - "I want"
+  - source_model: beowolx/CodeNinja-1.0-OpenChat-7B
+    positive_prompts:
+    - "code"
+    - "python"
+    - "javascript"
+    - "programming"
+    - "algorithm"
